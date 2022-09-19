@@ -4,33 +4,8 @@ session_start();
 $id = 0;
 $title = '';
 $update = false;
-// OR, require('.db_config.php);
-
-// if($_SERVER['REQUEST_METHOD'] === "POST"){
-//     $todo_item = $_POST['todo'];
-
-//     $sql = "INSERT INTO todo_list(`title`) VALUES('$todo_item')";
-//     $result = $conn->query($sql);
-//     header('location: ./index.php');
-// }
-
-// if($_SERVER['REQUEST_METHOD'] === "GET"){
-//     $deleteID = $_GET['deleteID'];
-
-//     $conn->query("DELETE FROM todo_list WHERE ID='$deleteID'");
-    
-//     //header('location: ./index.php');
-// }
-
-// if($_SERVER['REQUEST_METHOD'] === "GET"){
-//     $updateID = $_GET['updateID'];
-//     echo $updateID;
-
-//     $conn->query("UPDATE todo_list SET title='$updateID' WHERE id='$updateID'");
-// }
 
 if(isset($_POST['save'])){
-    //$name = $_POST['name'];
     $todo_item = $_POST['todo'];
 
     $conn->query("INSERT INTO todo_list(`title`) VALUES('$todo_item')");
